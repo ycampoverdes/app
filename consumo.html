@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sistema de Facturación de Agua Potable | La Puntilla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Inicio</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light"> Administración</span>
+      </a>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Joselyn </a>
+            <a href="#" class="d-block">Administrador</a>
+          </div>
+        </div>
+
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-header">ADMINISTRACIÓN GENERAL</li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-street-view"></i>
+                <p>Ubicación<i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="junta.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Junta</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="barrio.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Barrio</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="sector.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Sector</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Contribuyente<i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="usuario.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Usuarios</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="referencia.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Referencia</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user-tie"></i>
+                <p>Usuarios<i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="rol.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Roles</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="personal.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Personal Administrativo</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fab fa-usps"></i>
+                <p>Servicios<i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="costo.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Costos</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="categoria.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Categoria</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="cuenta.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Cuenta</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="serviciosnofac.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Servicios No Facturables</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-file-invoice-dollar"></i>
+                <p>Facturación<i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="factura.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Factura</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="consumo.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Lecturas Consumo</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-header">Perfil</li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user-edit text-warning"></i>
+                <p class="text">Editar Perfil</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link">
+                <i class="nav-icon fas fa-sign-in-alt text-danger"></i>
+                <p>Cerrar Sesión</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-8">
+              <h1 class="m-0 text-dark">Junta de Agua Potable | La Puntilla</h1>
+              <h4 class="m-0 text-dark">Sistema de Administración de Facturación de Agua Potable</h4>
+            </div><!-- /.col -->
+            <div class="col-sm-4">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active">Consumo General</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+
+      <section class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Consumo Contribuyentes</h3>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        Opciones
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">Usuario</a></li>
+                        <li class="dropdown-item"><a href="#">Factura</a></li>
+                        <li class="dropdown-item"><a href="#">Cédula</a></li>
+                        <li class="dropdown-item"><a href="#">Categoria</a></li>
+                      </ul>
+                    </div>
+                    <input type="text" class="form-control">
+                    <span class="input-group-append">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>IDENTIFICACIÓN</th>
+                      <th>CUENTA</th>
+                      <th>N° MEDIDOR</th>
+                      <th>USUARIOS</th>
+                      <th>MES</th>
+                      <th>AÑO</th>
+                      <th>LEC. ANTERIOR</th>
+                      <th>LEC. ACTUAL</th>
+                      <th>CONSUMO</th>
+                      <th>TARIFA</th>
+                      <th>ALCANT.</th>
+                      <th>SUBT. CONS.</th>
+                      <th>SUBT. SERV.</th>
+                      <th>INTERES</th>
+                      <th>TOTAL</th>
+                      <th>PAGADO</th>
+                      <th>OPCIONES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1204358764</td>
+                      <td>2520001-FA</td>
+                      <td>252065 - LP</td>
+                      <td>Maria Antonieta de las Nieves</td>
+                      <td><span class="badge bg-primary">Octubre</span></td>
+                      <td><span class="badge bg-primary">2020</span></td>
+                      <td>60</td>
+                      <td>150</td>
+                      <td>90</td>
+                      <td>3</td>
+                      <td>1.50</td>
+                      <td>4.50</td>
+                      <td>0.00</td>
+                      <td>0.50</td>
+                      <td>5.00</td>
+                      <td><span class="badge bg-danger">NO</span></td>
+                      <td>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
+                          data-target="#modalNuevo">
+                          <i class="fas fa-edit"></i>
+                        </button> &nbsp;
+                        <a href="factura.html">
+                          <button type="button" class="btn btn-primary btn-sm">
+                            <i class="fas fa-receipt"></i>
+                          </button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>1204358764</td>
+                      <td>2530001-FA</td>
+                      <td>251988 - LP</td>
+                      <td>Martha Jazmín Suarez Chicaiza</td>
+                      <td><span class="badge bg-primary">Agosto</span></td>
+                      <td><span class="badge bg-primary">2020</span></td>
+                      <td>160</td>
+                      <td>445</td>
+                      <td>285</td>
+                      <td>25</td>
+                      <td>2.50</td>
+                      <td>27.50</td>
+                      <td>0.00</td>
+                      <td>0.00</td>
+                      <td>27.50</td>
+                      <td><span class="badge bg-success">SI</span></td>
+                      <td>
+                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
+                          data-target="#modalNuevo">
+                          <i class="fas fa-edit"></i>
+                        </button> &nbsp;
+                        <a href="factura.html">
+                        <button type="button" class="btn btn-primary btn-sm">
+                          <i class="fas fa-receipt"></i>
+                        </button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer clearfix">
+                <div>
+                  <button type="button" class="btn btn-success btn-success" data-toggle="modal"
+                    data-target="#modalNuevo">
+                    <i class="fas fa-plus-square"></i> Nuevo
+                  </button>
+                </div>
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Inicio del modal agregar/actualizar-->
+    <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-primary modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Agregar Consumo</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-searchengin"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Factura | Nombre | Cédula" disabled>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nombres Usuarios" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Fecha Lectura</label>
+                      <div class="input-group date" id="fechaLectura" data-target-input="nearest">
+                          <input type="text" class="form-control datetimepicker-input" data-target="#fechaLectura"/>
+                          <div class="input-group-append" data-target="#fechaLectura" data-toggle="datetimepicker">
+                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Fecha Pago</label>
+                      <div class="input-group date" id="fechaPago" data-target-input="nearest">
+                          <input type="text" class="form-control datetimepicker-input" data-target="#fechaPago"/>
+                          <div class="input-group-append" data-target="#fechaPago" data-toggle="datetimepicker">
+                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Mes</label>
+                    <select class="form-control">                      
+                      <option selected hidden>Seleccione</option> 
+                      <option value="01">Enero</option> 
+                      <option value="02">Febrero</option> 
+                      <option value="03">Marzo</option> 
+                      <option value="04">Abril</option> 
+                      <option value="05">Mayo</option> 
+                      <option value="06">Junio</option> 
+                      <option value="07">Julio</option> 
+                      <option value="08">Agosto</option> 
+                      <option value="09">Septiembre</option> 
+                      <option value="10">Octubre</option> 
+                      <option value="11">Noviembre</option> 
+                      <option value="12">Diciembre</option> 
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>Año</label>
+                    <select class="form-control">                      
+                      <option selected hidden>Año</option>
+                      <option value="2018">2027</option> 
+                      <option value="2017">2026</option> 
+                      <option value="2016">2025</option> 
+                      <option value="2015">2024</option>
+                      <option value="2018">2023</option> 
+                      <option value="2017">2022</option> 
+                      <option value="2016">2021</option> 
+                      <option value="2015">2020</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <label>LECTURA</label>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Anterior">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Actual">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Consumo" disabled>
+                    </div>
+                  </div>
+                </div>             
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Tarifa">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Excedente">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Alcantarillado">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Varios Sericios">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Multas">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Pago Consumo">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Interés Mora">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>SUBTOTAL CONSUMO</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="0.00">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>SUBTOTAL S.N.F</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="0.00">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">                    
+                    <label>TOTAL</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="0.00">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>PAGADO</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label">Si</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" checked>
+                      <label class="form-check-label">No</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-9">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="far fa-calendar-minus"></i></span>
+                      </div>
+                      <textarea class="form-control" rows="3" placeholder="Observaciones generales"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!--Fin del modal-->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2020 <a href="#">Sistema de Facturación de Agua Potable</a>.</strong>
+      Todos los derechos reservados<div class="float-right d-none d-sm-inline-block">
+        <b>Versión </b>3.0
+      </div>
+    </footer>
+    <aside class="control-sidebar control-sidebar-dark">
+    </aside>
+  </div>
+
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="dist/js/adminlte.js"></script>
+  <script src="dist/js/pages/dashboard.js"></script>
+  <script src="dist/js/demo.js"></script>
+</body>
+
+</html>
