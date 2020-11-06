@@ -1,0 +1,15 @@
+[
+    {
+        "verFactura": "PDF",
+        "nombres": "Maria Antonieta de las Nieves",
+        "direccion": "10 de Agosto y 5 de Septiembre",
+        "cuenta": "2520001-FA",
+        "codigo": "0304658736",
+        "numeroMedidor": "252065 - LP",
+        "deuda": "$91.50",
+        "mesesPendientes": "0",
+        "fechaUltimaPago":"18-09-2020",
+        "fechaVencimiento":"08-10-2020",
+        "pagarBancaVirtual": "Acceso PayPhone"
+    }
+]

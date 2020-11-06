@@ -180,11 +180,11 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="consultaPago.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Consulta de Pagos</p>
-                  </a>
-                </li>
+                    <a href="consultaPago.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Consulta de Pagos</p>
+                    </a>
+                  </li>
               </ul>
             </li>
             <li class="nav-header">Perfil</li>
@@ -220,7 +220,7 @@
             <div class="col-sm-4">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                <li class="breadcrumb-item active">Sector</li>
+                <li class="breadcrumb-item active">Consulta de Pagos</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -232,114 +232,65 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Listado de Sectores</h3>
+                <h3 class="card-title">CONSULTA Y PAGO DE PLANILLAS</h3>
+              </div>
+              <div class="card-body col-6">
+                <div>
+                  <p>
+                    Haga click para realizar consultas acerca de los pagos pendientes
+                    ya sea con su código, cuenta contrato o su numero de cédula
+                  </p>
+                </div>
                 <div class="card-tools">
                   <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
                       <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                        Opciones
+                        CONSULTAS
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a href="#">Código</a></li>
-                        <li class="dropdown-item"><a href="#">Nombre</a></li>
-                        <li class="dropdown-item"><a href="#">Dirección</a></li>
+                        <li class="dropdown-item"><a href="#">Por Cédula o RUC</a></li>
+                        <li class="dropdown-item"><a href="#">Por Cuenta Contrato</a></li>
+                        <li class="dropdown-item"><a href="#">Por Código de Cliente*</a></li>
+                        <li class="dropdown-item"><a href="#">Por Número de Medidor</a></li>
                       </ul>
                     </div>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="0101578721">
                     <span class="input-group-append">
-                      <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+                      <button type="button" class="btn btn-info btn-flat" id="boton"><i class="fas fa-search"></i>Consultar Datos</button>
                     </span>
                   </div>
-
                 </div>
               </div>
+              
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>CÓDIGO</th>
-                      <th>SECTOR</th>
-                      <th>BARRIO</th>
-                      <th>JUNTA</th>
-                      <th>OPCIONES</th>
+                      <th>FACTURA</th>
+                      <th>TITULAR DEL SUMINISTRO</th>
+                      <th>DIRECCIÓN</th>
+                      <th>CUENTA</th>
+                      <th>IDENTIFICACIÓN</th>
+                      <th>N° MEDIDOR</th>
+                      <th>DEUDA TOTAL</th>
+                      <th>MESES PEND.</th>
+                      <th>FECHA ULT. PAGO</th>
+                      <th>FECHA VEC. PAGO</th>
+                      <th>PAGO VIRTUAL</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>STC001</td>
-                      <td>Santa Pradera</td>
-                      <td>Cdla. 12 de Octubre</td>
-                      <td>Junta Administradora KFlan</td>
-                      <td>
-                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
-                          data-target="#modalNuevo">
-                          <i class="fas fa-edit"></i>
-                        </button> &nbsp;
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                          data-target="#modalEliminar">
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>STC002</td>
-                      <td>Iliana</td>
-                      <td>Cdla. Corina del Parral</td>
-                      <td>Junta Administradora KFlan</td>
-                      <td>
-                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
-                          data-target="#modalNuevo">
-                          <i class="fas fa-edit"></i>
-                        </button> &nbsp;
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                          data-target="#modalEliminar">
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>STC003</td>
-                      <td>Santa Rosita</td>
-                      <td>Cdla. 12 de Octubre</td>
-                      <td>Junta Administradora KFlan</td>
-                      <td>
-                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
-                          data-target="#modalNuevo">
-                          <i class="fas fa-edit"></i>
-                        </button> &nbsp;
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                          data-target="#modalEliminar">
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>STC004</td>
-                      <td>San Luis</td>
-                      <td>Cdla. Corina del Parral</td>
-                      <td>Junta Administradora KFlan</td>
-                      <td>
-                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
-                          data-target="#modalNuevo">
-                          <i class="fas fa-edit"></i>
-                        </button> &nbsp;
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                          data-target="#modalEliminar">
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
+                  <tbody id="respuesta">
                   </tbody>
                 </table>
               </div>
               <div class="card-footer clearfix">
-                <div>
+                <!-- <div>
                   <button type="button" class="btn btn-success btn-success" data-toggle="modal"
                     data-target="#modalNuevo">
                     <i class="fas fa-plus-square"></i> Nuevo
                   </button>
-                </div>
+                </div> -->
                 <ul class="pagination pagination-sm m-0 float-right">
                   <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
                   <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -359,52 +310,88 @@
       <div class="modal-dialog modal-primary modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Agregar Sectores</h4>
+            <h4 class="modal-title">Agregar Cuentas</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-              <div class="form-group row">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-sort-numeric-up"></i></span>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-searchengin"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Búsqueda Cédula o Ruc">
+                    </div>
                   </div>
-                  <input type="text" class="form-control" placeholder="Dígite Código del Sector">
                 </div>
-              </div>
-              <div class="form-group row">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Nombres Usuarios" disabled>
+                    </div>
                   </div>
-                  <input type="text" class="form-control" placeholder="Dígite Nombre del Sector">
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <!-- select -->
                   <div class="form-group">
-                    <label>BARRIO</label>
-                    <select class="form-control">
-                      <option>Cdla. 12 de Octubre</option>
-                      <option>Cdla. Corina del Parral</option>
-                      <option>Cdla. Apostólica</option>
-                      <option>Cdla. Club Tauros</option>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-atlas"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Dígite Número Medidor">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fab fa-bandcamp"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Dígite Marca">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label>CATEGORIA</label>
+                    <select class="form-control">                      
+                      <option>Doméstica</option>
+                      <option>Comercial</option>
+                      <option>Residencial 1</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>JUNTA</label>
-                    <select class="form-control">
-                      <option>Junta Administradora KFlan</option>
-                      <option>Junta Administradora Villacis</option>
-                      <option>Junta Administradora Urb. Bella Esperanza</option>
-                      <option>Junta Administradora Pedregal</option>
-                    </select>
+                    <label>ALCANTARILLADO</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label">Si</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" checked>
+                      <label class="form-check-label">No</label>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-calendar-minus"></i></span>
+                  </div>
+                  <textarea class="form-control" rows="3" placeholder="Observaciones generales"></textarea>
                 </div>
               </div>
             </form>
@@ -425,13 +412,13 @@
       <div class="modal-dialog modal-danger" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Eliminar Sector</h4>
+            <h4 class="modal-title">Eliminar Cuenta</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>¿Estás seguro de eliminar el sector?</p>
+            <p>¿Estás seguro de eliminar la cuenta?</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -452,7 +439,7 @@
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
   </div>
-
+  <script src="dist/js/json.js"></script>
   <script src="plugins/jquery/jquery.min.js"></script>
   <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
   <script>
