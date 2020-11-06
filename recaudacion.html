@@ -36,22 +36,25 @@
 
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
       <a href="#" class="brand-link">
-        <span class="brand-text font-weight-light"> Administración Agua Pot.</span>
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light"> Administración</span>
       </a>
       <!-- Sidebar -->
       <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user5-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block">Joselyn </a>
             <a href="#" class="d-block">Administrador</a>
           </div>
         </div>
-        
+
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-header">ADMINISTRACIÓN GENERAL</li>
@@ -222,8 +225,8 @@
             </div><!-- /.col -->
             <div class="col-sm-4">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                <li class="breadcrumb-item active">Junta de Agua Potable</li>
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active">Roles</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -231,143 +234,143 @@
       </div>
 
       <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3 col-6">
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>1500</h3>
-                  <p>Solicitud de Cuenta</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6">
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-                  <p>Cobros Mensuales</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>464</h3>
-                  <p>Contribuyentes</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6">
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>365</h3>
-                  <p>Lecturas de Consumo</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-          </div>
-          <!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-              <!-- Custom tabs (Charts with tabs)-->
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">
-                    <i class="fas fa-chart-pie mr-1"></i>
-                    Estado de activos
-                  </h3>
-                </div><!-- /.card-header -->
-                <div class="card-body">
-                  <div class="tab-content p-0">
-                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Recaudación</h3>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        CONSULTA
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#">N° Medidor</a></li>
+                        <li class="dropdown-item"><a href="#">Identificación</a></li>
+                      </ul>
                     </div>
-                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                      <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                    </div>
-                  </div>
-                </div><!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-
-            </section>
-            <!-- /.Left col -->
-            <!-- right col (We are only adding the ID to make the widgets sortable)-->
-            <section class="col-lg-5 connectedSortable">
-
-              <div class="card bg-gradient-success">
-                <div class="card-header border-0">
-                  <h3 class="card-title">
-                    <i class="far fa-calendar-alt"></i>
-                    Calendario
-                  </h3>
-                </div>
-                <div class="card-body pt-0">
-                  <div id="calendar" style="width: 100%"></div>
-                </div>
-              </div>
-
-              <div class="card bg-gradient-primary">
-                <div class="card-footer bg-transparent">
-                  <div class="row">
-                    <div class="col-4 text-center">
-                      <div id="sparkline-1"></div>
-                      <div class="text-white">Cobros</div>
-                    </div>
-                    <div class="col-4 text-center">
-                      <div id="sparkline-2"></div>
-                      <div class="text-white">Servicios</div>
-                    </div>
-                    <div class="col-4 text-center">
-                      <div id="sparkline-3"></div>
-                      <div class="text-white">Recibos</div>
-                    </div>
+                    <input type="text" class="form-control">
+                    <span class="input-group-append">
+                      <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+                    </span>
                   </div>
                 </div>
               </div>
-            </section>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>CLIENTE</th>
+                      <th>LECTURA</th>
+                      <th>CONSUMO</th>
+                      <th>TOTAL A PAGAR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Maria Antonieta de las Nieves</td>
+                      <td>150 cm³</td>
+                      <td><span class="badge bg-info">90 cm³</span></td>
+                      <td><span class="badge bg-success">$ 91.50</span></td>
+                    </tr>
+                    <tr>
+                      <td>Martha Jazmín Suarez Chicaiza</td>
+                      <td>445 cm³</td>
+                      <td><span class="badge bg-info">285 cm³</span></td>
+                      <td><span class="badge bg-success">$ 27.50</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer clearfix">
+                <div>
+                  <button type="button" class="btn btn-success btn-success" data-toggle="modal"
+                    data-target="#modalNuevo">
+                    <i class="fas fa-plus-square"></i> Consulta
+                  </button>
+                </div>
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- /.content -->
     </div>
-
-    <!-- /.content-wrapper -->
+    <!--Inicio del modal agregar/actualizar-->
+    <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-primary modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Lectura del Medidor</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-sort-numeric-up"></i></span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Dígite Número de Medidor">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Consultar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!--Fin del modal-->
+    <!-- Inicio del modal Eliminar -->
+    <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Eliminar Roles</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>¿Estás seguro de eliminar el rol?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- Fin del modal Eliminar -->
     <footer class="main-footer">
       <strong>Copyright &copy; 2020 <a href="#">Sistema de Facturación de Agua Potable</a>.</strong>
       Todos los derechos reservados<div class="float-right d-none d-sm-inline-block">
         <b>Versión </b>3.0
       </div>
     </footer>
-
-    <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
     </aside>
-    <!-- /.control-sidebar -->
   </div>
-  <!-- ./wrapper -->
+
   <script src="plugins/jquery/jquery.min.js"></script>
   <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
   <script>
@@ -388,4 +391,5 @@
   <script src="dist/js/pages/dashboard.js"></script>
   <script src="dist/js/demo.js"></script>
 </body>
+
 </html>
