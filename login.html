@@ -14,12 +14,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="https://ycampoverdes.github.io/app/"><b>EMPRESA DE AGUA POTABLE</a>
+    <a href="index.html"><b>EMPRESA DE AGUA POTABLE</a>
   </div>
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sistema de Facturación de Agua Potable</p>
-      <form action="index.html" method="post">
+      <form action="#" id="formulario_login" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" value="joselyn@gmail.com">
           <div class="input-group-append">
@@ -56,5 +56,13 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/adminlte.min.js"></script>
+<script>
+  $(function(){
+    $('#formulario_login').submit(function(e) {
+      e.preventDefault();
+      window.location='index.html';
+    });
+  })
+</script>
 </body>
 </html>
